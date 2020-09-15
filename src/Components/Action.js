@@ -1,5 +1,6 @@
 export const increament='INCREAMENT'
 export const decreament='DECREAMENT'
+export const reset='RESET'
 
 export const increamentAction=()=>(
     {
@@ -10,5 +11,10 @@ export const increamentAction=()=>(
 export const decreamentAction=()=>(
     {
         type:decreament,
+    }
+)
+export const resetAction=()=>(
+    {
+        type:reset,
     }
 )

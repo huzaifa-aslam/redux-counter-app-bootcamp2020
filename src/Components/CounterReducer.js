@@ -1,4 +1,4 @@
-import {increament,decreament} from './Action'
+import {increament,decreament,reset} from './Action'
 
 const initialState={
     counter:0
@@ -10,6 +10,8 @@ export const CounterReducer=(state=initialState,action)=>
             return{...state,counter:state.counter+1}
         case decreament:
             return {...state,counter:state.counter-1}
+        case reset:
+            return initialState
         default:
             return state
     }
