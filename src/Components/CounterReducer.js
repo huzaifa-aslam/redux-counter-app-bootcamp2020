@@ -1,12 +1,14 @@
+import {increament,decreament} from './Action'
+
 const initialState={
     counter:0
 }
 export const CounterReducer=(state=initialState,action)=>
 {
     switch(action.type){
-        case 'INCREAMENT':
+        case increament:
             return{...state,counter:state.counter+1}
-        case 'DECREAMENT':
+        case decreament:
             return {...state,counter:state.counter-1}
         default:
             return state
