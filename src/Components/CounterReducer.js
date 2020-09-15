@@ -11,7 +11,7 @@ export const CounterReducer=(state=initialState,action)=>
         case decreament:
             return {...state,counter:state.counter-1}
         case reset:
-            return initialState
+            return {...initialState}
         default:
             return state
     }
