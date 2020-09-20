@@ -1,7 +1,7 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import { counterReducer } from './CounterReducer'
-
+// import { counterReducer } from './CounterReducer'
+import {increamentAction,decreamentAction} from './Action'
 // before redux
 
 
@@ -24,8 +24,8 @@ export const CounterInput = () => {
     return (
         <div>
             <h3>Inputs</h3>
-            <button onClick={()=>counterRedux({type: 'INCREAMENT'})}>+</button>
-            <button onClick={()=>counterRedux({type: 'DECREAMENT'})}>-</button>
+            <button onClick={()=>counterRedux(increamentAction())}>+</button>
+            <button onClick={()=>counterRedux(decreamentAction())}>-</button>
             <button onClick={()=>counterRedux({type: 'RESET'})}>Reset</button>
         </div>
     )

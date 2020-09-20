@@ -1,18 +1,18 @@
-import {increament,decreament,reset} from './Action'
+import {increament,decreament} from './Action'
 
-const initialState={
+const initialCounter={
     counter:0
 }
-export const CounterReducer=(state=initialState,action)=>
-{
+export const counterReducer=(state=initialCounter,action)=>{
     switch(action.type){
-        case increament:
-            return{...state,counter:state.counter+1}
-        case decreament:
-            return {...state,counter:state.counter-1}
-        case reset:
-            return {...initialState}
+        case increament :
+            return{...state,counter:state.counter+1};
+            case decreament:
+                return{...state,counter:state.counter-1};
+            case 'RESET':
+                return {...initialCounter}
         default:
             return state
     }
+
 }
